@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MeasureReport xmlns="http://hl7.org/fhir">
+  <id value="TXPVLS"/> 
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: TXPVLS</p></div>
+  <type value="summary"/> 
+  <measure value="Measure/TXPVLS"/> 
+  <reporter> 
+    <reference value=""/> 
+  </reporter> 
+  <period> 
+    <start value="2020-10-01"/> 
+    <end value="2021-09-31"/> 
+  </period>
+  <group> 
+    <code> <coding> <code value="initial-population"/> </coding> </code> 
+    <measureScore> <value value="0"/> </measureScore> 
+    <stratifier> 
+      <code> <coding> <code value="AGE_GROUP:SEX"/> </coding> </code> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+    </stratifier>
+    </group>
+    <group> 
+    <code> <coding> <code value="numerator"/> </coding> </code> 
+    <measureScore> <value value="0"/> </measureScore> 
+    <stratifier> 
+      <code> <coding> <code value="AGE_GROUP:SEX"/> </coding> </code> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+    </stratifier> 
+  </group>
+  <group> 
+    <code> <coding> <code value="denominator"/> </coding> </code> 
+    <measureScore> <value value="0"/> </measureScore> 
+    <stratifier> 
+      <code> <coding> <code value="AGE_GROUP:SEX"/> </coding> </code> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P0Y--P1Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P1Y--P5Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P5Y--P10Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P10Y--P15Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P15Y--P20Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P20Y--P25Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P25Y--P30Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P30Y--P35Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P35Y--P40Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P40Y--P45Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:F"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum> 
+      <stratum> 
+        <value> <coding> <code value="P50Y--P9999Y:M"/> </coding> </value> 
+        <measureScore> <value value="0"/> </measureScore> 
+      </stratum>   
+      <!--   ...   -->
+    </stratifier> 
+  </group>
+</MeasureReport> 
