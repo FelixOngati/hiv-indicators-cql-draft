@@ -2,13 +2,22 @@ library TXPVLS version '1.0.1'
 
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers
+
 // SNOMED-CT, International Edition
 codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008'
+
+// LOINC, 2.63+
+codesystem "LOINC": 'http://loinc.org'
 
 codesystem "ISO-8601-Derived Periods": 'http://ohie.org/ValueSet/iso-8601-derived-periods'
 
 // History of ART Therapy
-code "History of Antiretroviral Therapy": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+code "Already on ART and New on ART": '713540004' from "SNOMED-CT" display 'Already on ART and New on ART'
+
+code "HIV Positive": code '165816005' from "SNOMED-CT" display 'HIV Positive'
+code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
+
+valueset "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": 'urn:oid:2.16.840.1.113762.1.4.1056.50'
 
 codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
 
@@ -47,25 +56,38 @@ define "ART Observation":
           sort by effective)
 
 /*TODO: Find correct code for MedicationStatement*/
-/* define "ART Last Three Months":
-    [MedicationStatement: "History of Antiretroviral Therapy"] A where A.effective starts 3 months or more before end of "Measurement Period"
-*/
-
 define "ART Last Three Months":
-    "ART Observation" A where A.effective starts 3 months or more before end of "Measurement Period"
+    "Is HIV Positive" and exists([Observation: "Already on ART and New on ART"] A where A.effective starts 3 months or more before end of "Measurement Period")
 
-  define "Initial Population":
-    "ART Observation"
+/* define "ART Last Three Months":
+    "ART Observation" A where A.effective starts 3 months or more before end of "Measurement Period" */
+
+define "HIV Test Observation":
+  (
+    [Observation: "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)"]
+      union [Observation: "HIV 1 and 2 tests - Meaningful Use set"]
+  ) O
+    where O.status in {'final', 'amended', 'corrected'}
+      and O.value is not null
+
+define "HIV Positive Observation":
+    "HIV Test Observation" O where O.value ~ "HIV Positive"
+
+define "Is HIV Positive":
+  exists ("HIV Positive Observation")
+
+define "Initial Population":
+  "ART Observation"
 
 
-  define "Numerator":
-    "Viral Load Suppresed"
+define "Numerator":
+  "Viral Load Suppresed"
 
 define "Viral Load Suppresed":
        "ART Last Three Months" V where (V.value as Quantity)  <= 1000
 
 
-  define "Denominator":
+define "Denominator":
     "Initial Population"
 
 
