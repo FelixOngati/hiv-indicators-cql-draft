@@ -2,16 +2,12 @@
 
 <MeasureReport xmlns="http://hl7.org/fhir">
   <id value="TXPVLS"/> 
-  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: TXPVLS</p></div>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: TXPVLS</p></div></text>
   <type value="summary"/> 
   <measure value="Measure/TXPVLS"/> 
   <reporter> 
-    <reference value=""/> 
-  </reporter> 
-  <period> 
-    <start value="2020-10-01"/> 
-    <end value="2021-09-31"/> 
-  </period>
+    <reference value="reference here"/> 
+  </reporter>
   <group> 
     <code> <coding> <code value="initial-population"/> </coding> </code> 
     <measureScore> <value value="0"/> </measureScore> 
@@ -294,8 +290,7 @@
       <stratum> 
         <value> <coding> <code value="P50Y--P9999Y:M"/> </coding> </value> 
         <measureScore> <value value="0"/> </measureScore> 
-      </stratum>   
-      <!--   ...   -->
+      </stratum>
     </stratifier> 
   </group>
 </MeasureReport> 

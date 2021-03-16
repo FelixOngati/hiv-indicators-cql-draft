@@ -8,12 +8,12 @@ codesystem "SNOMED-CT": 'http://snomed.info/sct' version 'http://snomed.info/sct
 codesystem "ISO-8601-Derived Periods": 'http://ohie.org/ValueSet/iso-8601-derived-periods'
 
 // History of ART Therapy
-code "History of antiretroviral therapy (situation)": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
+code "History of Antiretroviral Therapy": '432101000124108' from "SNOMED-CT" display 'History of antiretroviral therapy (situation)'
 
 codesystem "CIEL": 'https://openconceptlab.org/orgs/CIEL/sources/CIEL'
- 
+
 code "Viral Load Quantitative": '856' from "CIEL" display 'HIV viral load'
- 
+
 code "Viral Load Qualitative": '1305' from "CIEL" display 'HIV VIRAL LOAD, QUALITATIVE'
 
 // Age Groups
@@ -46,6 +46,11 @@ define "ART Observation":
         and O.effective in day of "Measurement Period"
           sort by effective)
 
+/*TODO: Find correct code for MedicationStatement*/
+/* define "ART Last Three Months":
+    [MedicationStatement: "History of Antiretroviral Therapy"] A where A.effective starts 3 months or more before end of "Measurement Period"
+*/
+
 define "ART Last Three Months":
     "ART Observation" A where A.effective starts 3 months or more before end of "Measurement Period"
 
@@ -55,15 +60,15 @@ define "ART Last Three Months":
 
   define "Numerator":
     "Viral Load Suppresed"
-          
+
 define "Viral Load Suppresed":
        "ART Last Three Months" V where (V.value as Quantity)  <= 1000
 
 
   define "Denominator":
     "Initial Population"
-         
-         
+
+
 // Age Group
 define "Age Group":
   case
@@ -80,9 +85,9 @@ define "Age Group":
     when AgeInYearsAt(start of "Measurement Period") in Interval[50, null] then "P50Y--P9999Y"
     else null
   end
- 
+
 // Sex
 define "Sex": Patient.gender
- 
+
 // Age Group/Sex
 define "Age Group/Sex": "Age Group".code + ':' + "Sex"
