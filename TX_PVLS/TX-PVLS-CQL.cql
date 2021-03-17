@@ -14,7 +14,8 @@ codesystem "ISO-8601-Derived Periods": 'http://ohie.org/ValueSet/iso-8601-derive
 // History of ART Therapy
 code "Already on ART and New on ART": '713540004' from "SNOMED-CT" display 'Already on ART and New on ART'
 
-code "HIV Positive": code '165816005' from "SNOMED-CT" display 'HIV Positive'
+code "HIV Positive": '165816005' from "SNOMED-CT" display 'HIV Positive'
+
 code "HIV 1 and 2 tests - Meaningful Use set": '75622-1' from "LOINC" display 'HIV 1 and 2 tests - Meaningful Use set'
 
 valueset "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)": 'urn:oid:2.16.840.1.113762.1.4.1056.50'
@@ -55,12 +56,13 @@ define "ART Observation":
         and O.effective in day of "Measurement Period"
           sort by effective)
 
-/*TODO: Find correct code for MedicationStatement*/
-define "ART Last Three Months":
-    "Is HIV Positive" and exists([Observation: "Already on ART and New on ART"] A where A.effective starts 3 months or more before end of "Measurement Period")
 
-/* define "ART Last Three Months":
-    "ART Observation" A where A.effective starts 3 months or more before end of "Measurement Period" */
+define "HIV+ With At Least 3 Months ART":
+  "Is HIV Positive" and exists("ART Last Three Months")
+
+
+define "ART Last Three Months":
+     [Observation: "Already on ART and New on ART"] A where A.effective starts 3 months or more before end of "Measurement Period"
 
 define "HIV Test Observation":
   (
