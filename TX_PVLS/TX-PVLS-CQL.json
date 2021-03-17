@@ -1,0 +1,1170 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "",
+         "type" : "CqlToElmInfo"
+      } ],
+      "identifier" : {
+         "id" : "TXPVLS",
+         "version" : "1.0.1"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1"
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1"
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "parameterTypeSpecifier" : {
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "name" : "SNOMED-CT",
+            "id" : "http://snomed.info/sct",
+            "version" : "http://snomed.info/sct/900000000000207008",
+            "accessLevel" : "Public"
+         }, {
+            "name" : "LOINC",
+            "id" : "http://loinc.org",
+            "accessLevel" : "Public"
+         }, {
+            "name" : "ISO-8601-Derived Periods",
+            "id" : "http://ohie.org/ValueSet/iso-8601-derived-periods",
+            "accessLevel" : "Public"
+         }, {
+            "name" : "CIEL",
+            "id" : "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+            "accessLevel" : "Public"
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "name" : "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)",
+            "id" : "urn:oid:2.16.840.1.113762.1.4.1056.50",
+            "accessLevel" : "Public"
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "name" : "Already on ART and New on ART",
+            "id" : "713540004",
+            "display" : "Already on ART and New on ART",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "name" : "HIV Positive",
+            "id" : "165816005",
+            "display" : "HIV Positive",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "name" : "HIV 1 and 2 tests - Meaningful Use set",
+            "id" : "75622-1",
+            "display" : "HIV 1 and 2 tests - Meaningful Use set",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "LOINC"
+            }
+         }, {
+            "name" : "Viral Load Quantitative",
+            "id" : "856",
+            "display" : "HIV viral load",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "CIEL"
+            }
+         }, {
+            "name" : "Viral Load Qualitative",
+            "id" : "1305",
+            "display" : "HIV VIRAL LOAD, QUALITATIVE",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "CIEL"
+            }
+         }, {
+            "name" : "P0Y--P1Y",
+            "id" : "P0Y--P1Y",
+            "display" : "< 1 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P1Y--P5Y",
+            "id" : "P1Y--P5Y",
+            "display" : "1-4 years",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P5Y--P10Y",
+            "id" : "P5Y--P10Y",
+            "display" : "5-9 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P10Y--P15Y",
+            "id" : "P10Y--P15Y",
+            "display" : "10-14 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P15Y--P20Y",
+            "id" : "P15Y--P20Y",
+            "display" : "15-19 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P20Y--P25Y",
+            "id" : "P20Y--P25Y",
+            "display" : "20-24 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P25Y--P30Y",
+            "id" : "P25Y--P30Y",
+            "display" : "25-29 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P30Y--P35Y",
+            "id" : "P30Y--P35Y",
+            "display" : "30-34 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P35Y--P40Y",
+            "id" : "P35Y--P40Y",
+            "display" : "35-39 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P40Y--P50Y",
+            "id" : "P40Y--P50Y",
+            "display" : "40-49 year",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         }, {
+            "name" : "P50Y--P9999Y",
+            "id" : "P50Y--P9999Y",
+            "display" : "50+ years",
+            "accessLevel" : "Public",
+            "codeSystem" : {
+               "name" : "ISO-8601-Derived Periods"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "name" : "HIV Test Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Query",
+               "source" : [ {
+                  "alias" : "O",
+                  "expression" : {
+                     "type" : "Union",
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "name" : "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)",
+                           "type" : "ValueSetRef"
+                        }
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "type" : "ToList",
+                           "operand" : {
+                              "name" : "HIV 1 and 2 tests - Meaningful Use set",
+                              "type" : "CodeRef"
+                           }
+                        }
+                     } ]
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "type" : "And",
+                  "operand" : [ {
+                     "type" : "In",
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "path" : "status",
+                           "scope" : "O",
+                           "type" : "Property"
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "final",
+                           "type" : "Literal"
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "amended",
+                           "type" : "Literal"
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "corrected",
+                           "type" : "Literal"
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "Not",
+                     "operand" : {
+                        "type" : "IsNull",
+                        "operand" : {
+                           "path" : "value",
+                           "scope" : "O",
+                           "type" : "Property"
+                        }
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "HIV Positive Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Query",
+               "source" : [ {
+                  "alias" : "O",
+                  "expression" : {
+                     "name" : "HIV Test Observation",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "type" : "Equivalent",
+                  "operand" : [ {
+                     "name" : "ToConcept",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "asType" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "As",
+                        "operand" : {
+                           "path" : "value",
+                           "scope" : "O",
+                           "type" : "Property"
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToConcept",
+                     "operand" : {
+                        "name" : "HIV Positive",
+                        "type" : "CodeRef"
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Is HIV Positive",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Exists",
+               "operand" : {
+                  "name" : "HIV Positive Observation",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "name" : "ART Observation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Last",
+               "source" : {
+                  "type" : "Query",
+                  "source" : [ {
+                     "alias" : "O",
+                     "expression" : {
+                        "type" : "Union",
+                        "operand" : [ {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "codes" : {
+                              "type" : "ToList",
+                              "operand" : {
+                                 "name" : "Viral Load Quantitative",
+                                 "type" : "CodeRef"
+                              }
+                           }
+                        }, {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "codes" : {
+                              "type" : "ToList",
+                              "operand" : {
+                                 "name" : "Viral Load Qualitative",
+                                 "type" : "CodeRef"
+                              }
+                           }
+                        } ]
+                     }
+                  } ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "type" : "And",
+                     "operand" : [ {
+                        "type" : "In",
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "operand" : [ {
+                              "path" : "status",
+                              "scope" : "O",
+                              "type" : "Property"
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "final",
+                              "type" : "Literal"
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "amended",
+                              "type" : "Literal"
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "corrected",
+                              "type" : "Literal"
+                           } ]
+                        } ]
+                     }, {
+                        "precision" : "Day",
+                        "type" : "In",
+                        "operand" : [ {
+                           "type" : "Case",
+                           "caseItem" : [ {
+                              "when" : {
+                                 "isType" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "Is",
+                                 "operand" : {
+                                    "path" : "effective",
+                                    "scope" : "O",
+                                    "type" : "Property"
+                                 }
+                              },
+                              "then" : {
+                                 "name" : "ToDateTime",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "operand" : [ {
+                                    "asType" : "{http://hl7.org/fhir}dateTime",
+                                    "type" : "As",
+                                    "operand" : {
+                                       "path" : "effective",
+                                       "scope" : "O",
+                                       "type" : "Property"
+                                    }
+                                 } ]
+                              }
+                           }, {
+                              "when" : {
+                                 "isType" : "{http://hl7.org/fhir}instant",
+                                 "type" : "Is",
+                                 "operand" : {
+                                    "path" : "effective",
+                                    "scope" : "O",
+                                    "type" : "Property"
+                                 }
+                              },
+                              "then" : {
+                                 "name" : "ToDateTime",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "operand" : [ {
+                                    "asType" : "{http://hl7.org/fhir}instant",
+                                    "type" : "As",
+                                    "operand" : {
+                                       "path" : "effective",
+                                       "scope" : "O",
+                                       "type" : "Property"
+                                    }
+                                 } ]
+                              }
+                           } ],
+                           "else" : {
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "Null"
+                           }
+                        }, {
+                           "name" : "Measurement Period",
+                           "type" : "ParameterRef"
+                        } ]
+                     } ]
+                  },
+                  "sort" : {
+                     "by" : [ {
+                        "direction" : "asc",
+                        "path" : "effective",
+                        "type" : "ByColumn"
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "name" : "ART Last Three Months",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Query",
+               "source" : [ {
+                  "alias" : "A",
+                  "expression" : {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "type" : "ToList",
+                        "operand" : {
+                           "name" : "Already on ART and New on ART",
+                           "type" : "CodeRef"
+                        }
+                     }
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "type" : "SameOrBefore",
+                  "operand" : [ {
+                     "type" : "Start",
+                     "operand" : {
+                        "name" : "ToInterval",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "operand" : [ {
+                           "asType" : "{http://hl7.org/fhir}Period",
+                           "type" : "As",
+                           "operand" : {
+                              "path" : "effective",
+                              "scope" : "A",
+                              "type" : "Property"
+                           }
+                        } ]
+                     }
+                  }, {
+                     "type" : "Subtract",
+                     "operand" : [ {
+                        "type" : "End",
+                        "operand" : {
+                           "name" : "Measurement Period",
+                           "type" : "ParameterRef"
+                        }
+                     }, {
+                        "value" : 3,
+                        "unit" : "months",
+                        "type" : "Quantity"
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "HIV+ With At Least 3 Months ART",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "And",
+               "operand" : [ {
+                  "name" : "Is HIV Positive",
+                  "type" : "ExpressionRef"
+               }, {
+                  "type" : "Exists",
+                  "operand" : {
+                     "name" : "ART Last Three Months",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "name" : "Initial Population",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "name" : "HIV+ With At Least 3 Months ART",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "name" : "Viral Load Suppresed",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Query",
+               "source" : [ {
+                  "alias" : "V",
+                  "expression" : {
+                     "name" : "ART Last Three Months",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "relationship" : [ ],
+               "where" : {
+                  "type" : "LessOrEqual",
+                  "operand" : [ {
+                     "name" : "ToQuantity",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "path" : "value",
+                           "scope" : "V",
+                           "type" : "Property"
+                        },
+                        "asTypeSpecifier" : {
+                           "name" : "{http://hl7.org/fhir}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToQuantity",
+                     "operand" : {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "1000",
+                        "type" : "Literal"
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Numerator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "name" : "Viral Load Suppresed",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "name" : "Denominator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "name" : "Initial Population",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "name" : "Age Group",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Case",
+               "caseItem" : [ {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "0",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "1",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P0Y--P1Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "1",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "5",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P1Y--P5Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "5",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "10",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P5Y--P10Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "10",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "15",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P10Y--P15Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "15",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "20",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P15Y--P20Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "20",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "25",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P20Y--P25Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "25",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "30",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P25Y--P30Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "30",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "35",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P30Y--P35Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "35",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "40",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P35Y--P40Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : false,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "40",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "50",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P40Y--P50Y",
+                     "type" : "CodeRef"
+                  }
+               }, {
+                  "when" : {
+                     "type" : "In",
+                     "operand" : [ {
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "operand" : [ {
+                           "type" : "ToDateTime",
+                           "operand" : {
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "type" : "Start",
+                           "operand" : {
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "lowClosed" : true,
+                        "highClosed" : true,
+                        "type" : "Interval",
+                        "low" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "50",
+                           "type" : "Literal"
+                        },
+                        "high" : {
+                           "asType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "type" : "As",
+                           "operand" : {
+                              "type" : "Null"
+                           }
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "name" : "P50Y--P9999Y",
+                     "type" : "CodeRef"
+                  }
+               } ],
+               "else" : {
+                  "asType" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "As",
+                  "operand" : {
+                     "type" : "Null"
+                  }
+               }
+            }
+         }, {
+            "name" : "Sex",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "path" : "gender",
+               "type" : "Property",
+               "source" : {
+                  "name" : "Patient",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "name" : "Age Group/Sex",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "expression" : {
+               "type" : "Concatenate",
+               "operand" : [ {
+                  "type" : "Concatenate",
+                  "operand" : [ {
+                     "path" : "code",
+                     "type" : "Property",
+                     "source" : {
+                        "name" : "Age Group",
+                        "type" : "ExpressionRef"
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : ":",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "name" : "ToString",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "name" : "Sex",
+                     "type" : "ExpressionRef"
+                  } ]
+               } ]
+            }
+         } ]
+      }
+   }
+}
+

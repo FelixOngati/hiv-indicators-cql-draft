@@ -48,22 +48,7 @@ documented in the medical or laboratory records/laboratory information systems (
  */
 
 context Patient
-
-define "ART Observation":
-  Last(( [Observation: "Viral Load Quantitative"]
-        union [Observation: "Viral Load Qualitative"] ) O
-        where O.status in {'final', 'amended', 'corrected'}
-        and O.effective in day of "Measurement Period"
-          sort by effective)
-
-
-define "HIV+ With At Least 3 Months ART":
-  "Is HIV Positive" and exists("ART Last Three Months")
-
-
-define "ART Last Three Months":
-     [Observation: "Already on ART and New on ART"] A where A.effective starts 3 months or more before end of "Measurement Period"
-
+/* Patient has to be HIV+ */
 define "HIV Test Observation":
   (
     [Observation: "Human Immunodeficiency Virus (HIV) Laboratory Test Codes (Ab and Ag)"]
@@ -72,14 +57,32 @@ define "HIV Test Observation":
     where O.status in {'final', 'amended', 'corrected'}
       and O.value is not null
 
+
 define "HIV Positive Observation":
     "HIV Test Observation" O where O.value ~ "HIV Positive"
 
 define "Is HIV Positive":
   exists ("HIV Positive Observation")
 
+
+/* Check if patient is on ART within the reporting period for at least 3 months before end of measuring period*/
+
+define "ART Observation":
+  Last(( [Observation: "Viral Load Quantitative"]
+        union [Observation: "Viral Load Qualitative"] ) O
+        where O.status in {'final', 'amended', 'corrected'}
+        and O.effective in day of "Measurement Period"
+          sort by effective)
+
+define "ART Last Three Months":
+     [Observation: "Already on ART and New on ART"] A where A.effective starts 3 months or more before end of "Measurement Period"
+
+define "HIV+ With At Least 3 Months ART":
+  "Is HIV Positive" and exists("ART Last Three Months")
+
+
 define "Initial Population":
-  "ART Observation"
+  "HIV+ With At Least 3 Months ART"
 
 
 define "Numerator":
