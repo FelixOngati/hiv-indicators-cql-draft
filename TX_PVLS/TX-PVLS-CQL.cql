@@ -85,4 +85,4 @@ define "Denominator":
 define "Sex": Patient.gender
 
 // Age Group/Sex
-define "Age Group/Sex": AR."Age Group".code + ':' + "Sex"
+define "AGE_GROUP:SEX": AR."Age Group".code + ':' + "Sex"

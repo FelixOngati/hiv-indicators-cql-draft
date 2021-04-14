@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Measure xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/measure.xsd">
+<Measure xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/measure.xsd">
   <id value="TXPVLS"/>
   <url value="Measure/TXPVLS"/>
   <identifier>
@@ -8,7 +9,7 @@
   </identifier>
   <version value="0.0.0"/>
   <name value="TXPVLS"/>
-  <title value="HIV TXPVLS Indicator"/>
+  <title value="TXPVLS"/>
   <status value="draft"/>
   <experimental value="true"/>
   <date value="2021-03-01"/>
